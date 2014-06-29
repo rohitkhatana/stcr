@@ -47,11 +47,18 @@
 var map = '';
 
 function initialize() {
+	var myLatlng = new google.maps.LatLng(28.143413,77.34103);
     var mapOptions = {
       zoom: 14,
-      center: new google.maps.LatLng(16.8461789,96.1309764)
+      center: myLatlng
     };
+
     map = new google.maps.Map(document.getElementById('map'),  mapOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'St.C.R.School'
+  });
 }
 
 // load google map
